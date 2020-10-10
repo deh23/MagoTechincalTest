@@ -31,8 +31,8 @@ namespace MagoTechincalTest.Models
         {
             var airplane = _airplaneRepository.Get(new Airplane
             {
-                Model = request.Model,
-                Type = request.Type
+                Model = request.Model.Trim(),
+                Type = request.Type.Trim()
             });
 
             if (airplane == null)
