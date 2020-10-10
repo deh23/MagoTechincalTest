@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MagoModel.Airplane.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MagoModel.efml</DependentUpon>
+    </Compile>
+    <Compile Update="MagoModel.MagoModelEntity.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MagoModel.efml</DependentUpon>
+    </Compile>
+    <Compile Update="MagoModel.Reservation.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MagoModel.efml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="MagoModel.Diagram1.view">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MagoModel.efml</DependentUpon>
+    </None>
+    <None Update="MagoModel.edps">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MagoModel.efml</DependentUpon>
+    </None>
+    <None Update="MagoModel.efml">
+      <Generator>DevartEFCoreGenerator</Generator>
+      <LastGenOutput>MagoModel.info</LastGenOutput>
+    </None>
+    <None Update="MagoModel.info">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MagoModel.efml</DependentUpon>
+    </None>
+  </ItemGroup>
+
+
+</Project>

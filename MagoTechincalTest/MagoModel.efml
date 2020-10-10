@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<efcore namespace="MagoTechincalTest" p1:name="MagoModelEntity" p1:Guid="5c40e2bb-3833-4c7a-82f7-8eb9e11b5966" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+  <class name="Airplane" entity-set="Airplanes" table="Airplanes" schema="dbo" p1:Guid="390c9296-bfae-450a-a778-640cd6545b6d">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="415eaec3-71da-401d-8b0a-d130df0e5766">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Type" type="String" p1:ValidateMaxLength="10" p1:ValidateRequired="true" p1:Guid="64c8b496-ee50-45d6-a177-8286e4839877">
+      <column name="Type" not-null="True" length="10" sql-type="nchar" p1:fixed-length="True" p1:unicode="True" />
+    </property>
+    <property name="Size" type="String" p1:ValidateMaxLength="10" p1:ValidateRequired="true" p1:Guid="199f4ae9-b73d-4707-9d1d-f919cb493feb">
+      <column name="Size" not-null="True" length="10" sql-type="nchar" p1:fixed-length="True" p1:unicode="True" />
+    </property>
+    <property name="Model" type="String" p1:ValidateMaxLength="10" p1:ValidateRequired="true" p1:Guid="8d77558b-d056-491a-aec0-bb54fe32179f">
+      <column name="Model" not-null="True" length="10" sql-type="nchar" p1:fixed-length="True" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="Reservation" entity-set="Reservations" table="Reservations" schema="dbo" p1:Guid="59ce15df-6399-4ea4-a3a0-05ed3db7f7d5">
+    <id name="Id" type="Int32" p1:ValidateRequired="true" p1:Guid="48cea4f1-0e04-4054-b48e-3dd22d2623dc">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="PlaneType" type="String" p1:nullable="True" p1:ValidateMaxLength="10" p1:ValidateRequired="false" p1:Guid="7cbe0e49-e6f0-4567-aa22-2523d2fb0cac">
+      <column name="PlaneType" not-null="False" length="10" sql-type="nchar" p1:fixed-length="True" p1:unicode="True" />
+    </property>
+    <property name="Slots" type="Int32" p1:ValidateRequired="true" p1:Guid="74f1791e-40f0-4e74-b731-60c6f12f6abc">
+      <column name="Slots" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="PlaneId" type="Int32" p1:ValidateRequired="true" p1:Guid="8d5fd56d-1b11-4beb-9164-0052d828552b">
+      <column name="PlaneId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+  </class>
+</efcore>
